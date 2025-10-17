@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/buttons.css" />
+    <link rel="stylesheet" href="./src/styles/containers_and_frames.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+
+    <!-- favicon-->
+    <link rel="shortcut icon" type="image/png" href="./src/assets/icons/millenium.png" />
+
+
+    <title>Yu-gi-oh</title>
+</head>
+
+<body>
+<audio id="bgm" loop>
+    <source src="./src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+</audio>
+
+    <div class="bg-video">
+        <video class="video" autoplay muted loop>
+            <source src="./src/assets/video/yugi.mp4" type="video/mp4" />
+        </video>
+    </div>
+
+    <div class="container">
+        <div class="container_left framed-golden-2">
+            <div class="score_box frame">
+                <span id="score_pointer"> win : 0 | loss : 0 </span>
+            </div>
+            <div class="menu_avatar">
+                <img id="card-image" />
+            </div>
+            <div class="card_details frame">
+                <p id="card-name">a</p>
+                <p id="card-type">b</p>
+            </div>
+        </div>
+
+        <div class="container_right">
+            <div class="card-box__container">
+
+                <div class="card-box framed" id="computer-card"></div>
+
+                <div class="card-versus__container">
+                    
+                    <div class="card-versus_top">
+                        <div class="card-infielder">
+
+                            <img id="player-field-card" height="180px" width="125px">
+                        </div>
+
+                        <img height="100px" src="./src/assets/icons/millenium2.png">
+
+                        <div class="card-infielder">
+                            <img id="computer-field-card" height="180px" width="125px">
+                        </div>
+                    </div>
+                    <div class="card-versus_bottom">
+                        <button class="rpgui-button" id="btn" onclick="resetDuel()">GANHOU</button>
+                    </div>
+
+
+                </div>
+                <div class="card-box framed" id="player-card"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./src/scripts/engine.js" defer></script>
+</body>
+
+</html>
